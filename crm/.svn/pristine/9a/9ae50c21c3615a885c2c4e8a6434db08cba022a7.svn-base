@@ -1,0 +1,42 @@
+package com.wasu.ptyw.crm;
+
+import com.wasu.ptyw.common.exception.DAOException;
+import com.wasu.ptyw.crm.dao.MenuDAO;
+import com.wasu.ptyw.crm.dao.UserDAO;
+import com.wasu.ptyw.crm.dataobject.UserDO;
+import com.wasu.ptyw.crm.dataobject.enums.MenuChangeFormStateEnum;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.Date;
+
+/**
+ * @author: ������
+ * @Date: 13-12-13  ����1:38
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:applicationContext.xml","classpath:springmvc.xml","classpath:persistence/persistence.xml"})
+public class BaseTest {
+
+    @Autowired
+    UserDAO userDAO;
+
+    @Test
+    public void test1() throws DAOException {
+
+        UserDO userDO = new UserDO();
+
+        userDO.setUsername("jay");
+        userDO.setPassword("jay");
+        userDO.setLoginName("jay");
+        userDO.setStatus(1);
+        userDO.setGmtModified(new Date());
+        userDO.setGmtCreate(new Date());
+
+//        userDAO.save(userDO);
+    }
+
+}
