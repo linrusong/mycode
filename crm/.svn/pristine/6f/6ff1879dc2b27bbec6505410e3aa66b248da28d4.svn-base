@@ -1,7 +1,0 @@
-<Context>
-    <Resource name="jdbc/crm" auth="Container" type="javax.sql.DataSource"
-              maxActive="20" maxIdel="10" maxWait="1000" username="root"
-              password="admin123" driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://125.210.110.15:3306/crm?useUnicode=true&amp;characterEncoding=UTF-8">
-    </Resource>
-</Context>
